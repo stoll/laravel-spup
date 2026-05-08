@@ -1,6 +1,6 @@
 {
   "name": "@sebastianstoll/spup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Laravel process manager with a tabbed TUI.",
   "type": "module",
   "bin": {
