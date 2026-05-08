@@ -5,7 +5,7 @@ Holistic Laravel process manager with a tabbed TUI. One command to start everyth
 ## Install
 
 ```bash
-npm install -g spup
+npm install -g @sebastianstoll/spup
 ```
 
 ## Usage
