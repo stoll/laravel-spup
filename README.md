@@ -1,6 +1,6 @@
-# spup
+# spup (Spin Up)
 
-Laravel process manager with a tabbed TUI. One command to start everything.
+Holistic Laravel process manager with a tabbed TUI. One command to start everything (schedulers, queues, vite, and whatever you want).
 
 ## Install
 
@@ -17,7 +17,7 @@ cd ~/projects/my-laravel-app
 spup init
 ```
 
-Creates a `spup.json` with Laravel defaults:
+Creates a `spup.json` with Laravel defaults (configure as needed):
 
 ```json
 {
