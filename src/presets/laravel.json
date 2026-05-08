@@ -1,0 +1,9 @@
+{
+  "description": "Laravel with Vite, queue worker, and logs",
+  "processes": [
+    { "name": "server", "command": "php artisan serve" },
+    { "name": "vite", "command": "npm run dev" },
+    { "name": "queue", "command": "php artisan queue:work" },
+    { "name": "logs", "command": "tail -f storage/logs/laravel.log" }
+  ]
+}
