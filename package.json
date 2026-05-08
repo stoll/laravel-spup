@@ -1,0 +1,23 @@
+{
+  "name": "spup",
+  "version": "0.1.0",
+  "description": "Start any project with one command. Preset-driven process launcher.",
+  "type": "module",
+  "bin": {
+    "spup": "./bin/spup.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "keywords": [
+    "cli",
+    "dev",
+    "process-manager",
+    "laravel",
+    "react",
+    "nextjs",
+    "monorepo"
+  ],
+  "license": "MIT"
+}
