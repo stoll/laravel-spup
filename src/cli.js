@@ -1,22 +1,23 @@
 import { init } from './commands/init.js';
 import { start } from './commands/start.js';
-import { list } from './commands/list.js';
 
 const HELP = `
-spup - Start any project with one command.
+spup - Laravel process manager with a tabbed TUI.
 
 Usage:
-  spup init <preset>   Initialize spup.json with a preset
-  spup start           Start all processes defined in spup.json
-  spup list            List available presets
-  spup help            Show this help message
-
-Presets:
-  laravel, next
+  spup init    Initialize spup.json with Laravel defaults
+  spup start   Start all processes in a tabbed terminal UI
+  spup help    Show this help message
 
 Examples:
-  spup init laravel
+  spup init
   spup start
+
+Navigation (during spup start):
+  1-9          Switch to tab by number
+  Tab          Next tab
+  Shift+Tab    Previous tab
+  q / Ctrl+C   Quit
 `;
 
 export function run(args) {
@@ -24,11 +25,9 @@ export function run(args) {
 
   switch (command) {
     case 'init':
-      return init(args[1]);
+      return init();
     case 'start':
       return start();
-    case 'list':
-      return list();
     case 'help':
     case '--help':
     case '-h':
