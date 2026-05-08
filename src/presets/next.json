@@ -1,6 +1,0 @@
-{
-  "description": "Next.js development server",
-  "processes": [
-    { "name": "dev", "command": "npm run dev" }
-  ]
-}
