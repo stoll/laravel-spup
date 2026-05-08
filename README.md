@@ -1,6 +1,6 @@
 # spup
 
-Start any project with one command. No more remembering what to run.
+Laravel process manager with a tabbed TUI. One command to start everything.
 
 ## Install
 
@@ -10,56 +10,54 @@ npm install -g spup
 
 ## Usage
 
-### Initialize a project
+### Initialize
 
 ```bash
 cd ~/projects/my-laravel-app
-spup init laravel
+spup init
 ```
 
-This creates a `spup.json` in your project root:
+Creates a `spup.json` with Laravel defaults:
 
 ```json
 {
   "name": "my-laravel-app",
-  "preset": "laravel",
   "processes": [
-    { "name": "server", "command": "php artisan serve" },
+    { "name": "serve", "command": "php artisan serve" },
     { "name": "vite", "command": "npm run dev" },
     { "name": "queue", "command": "php artisan queue:work" },
-    { "name": "logs", "command": "tail -f storage/logs/laravel.log" }
+    { "name": "logs", "command": "tail -f storage/logs/laravel.log" },
+    { "name": "schedule", "command": "php artisan schedule:work" }
   ]
 }
 ```
 
-### Start everything
+### Start
 
 ```bash
 spup start
 ```
 
-All processes run concurrently with colored, labeled output. Press `Ctrl+C` to stop everything.
+Opens a full-screen tabbed UI where each process has its own tab with dedicated output.
 
-### List available presets
+### Navigation
 
-```bash
-spup list
-```
+| Key | Action |
+|-----|--------|
+| `1`-`9` | Switch to tab by number |
+| `Tab` | Next tab |
+| `Shift+Tab` | Previous tab |
+| `↑` / `↓` | Scroll output |
+| `PgUp` / `PgDn` | Scroll by page |
+| `q` / `Ctrl+C` | Quit all processes |
 
-## Presets
+## Configuration
 
-| Preset | Processes |
-|--------|-----------|
-| `laravel` | php artisan serve, npm run dev, queue worker, log tail |
-| `next` | npm run dev |
+Edit `spup.json` to customize. Each process supports:
 
-## Custom configuration
-
-Edit `spup.json` to add, remove, or modify processes. Each process supports:
-
-- `name` — Label shown in the terminal
+- `name` — Tab label
 - `command` — The command to run
-- `cwd` — Working directory (optional, useful for monorepos)
+- `cwd` — Working directory (optional)
 - `env` — Environment variables (optional)
 
 ## License

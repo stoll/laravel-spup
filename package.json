@@ -1,7 +1,7 @@
 {
   "name": "spup",
   "version": "0.1.0",
-  "description": "Start any project with one command. Preset-driven process launcher.",
+  "description": "Laravel process manager with a tabbed TUI.",
   "type": "module",
   "bin": {
     "spup": "./bin/spup.js"
@@ -12,12 +12,10 @@
   ],
   "keywords": [
     "cli",
-    "dev",
-    "process-manager",
     "laravel",
-    "react",
-    "nextjs",
-    "monorepo"
+    "process-manager",
+    "tui",
+    "dev"
   ],
   "license": "MIT"
 }
