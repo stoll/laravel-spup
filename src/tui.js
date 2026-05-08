@@ -1,5 +1,3 @@
-import { colors } from './colors.js';
-
 const ESC = '\x1b[';
 
 const ansi = {
